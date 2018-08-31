@@ -21,7 +21,7 @@ public class CustomerAPI {
 			
 		if(assCusRequest!= null)
 		{
-			assCutResponse =	customerService.getAssessCustomer(assCusRequest);
+			assCutResponse =customerService.getAssessCustomer(assCusRequest);
 			
 		}
 	  return assCutResponse;
