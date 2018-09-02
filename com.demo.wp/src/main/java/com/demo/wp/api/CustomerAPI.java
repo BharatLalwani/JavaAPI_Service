@@ -15,13 +15,13 @@ public class CustomerAPI {
 	@Autowired
 	CustomerService customerService;
 	
-	@RequestMapping(value="/assessCustomer",method=RequestMethod.POST)
+	@RequestMapping(value="/businessarrangement/assesscustomer",method=RequestMethod.POST)
 	public com.demo.wp.model.AssessCustomerResponse assessCustomer(@RequestBody AssessCustomerRequest assCusRequest ) {
 		AssessCustomerResponse assCutResponse = new AssessCustomerResponse();
 			
 		if(assCusRequest!= null)
 		{
-			assCutResponse =	customerService.getAssessCustomer(assCusRequest);
+			assCutResponse =customerService.getAssessCustomer(assCusRequest);
 			
 		}
 	  return assCutResponse;
